@@ -20,9 +20,16 @@ nav {
 
 .title {
   font-size: 2rem;
+  color: #974b4b;
 }
 
 .btn {
-  padding: 5px;
+  padding: 10px;
   min-width: 80px;
+  border-radius: 10px;
+  border: none;
+  background: #c95858;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -1,0 +1,9 @@
+footer {
+  text-align: center;
+  margin: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #202020;
+}

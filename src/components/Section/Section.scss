@@ -7,6 +7,10 @@
 .section {
   @include center();
   flex-direction: column;
+
+  & > h1 {
+    color: #c95858;
+  }
 }
 
 .boxes {

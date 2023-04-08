@@ -9,7 +9,7 @@ export default function Landing() {
         <div className='info'>
           <h1>Welcome to Recipe Resource! Discover delicious recipes from around the world and unleash your inner chef.</h1>
           <p>Join us in the kitchen. Let's cook up something amazing!</p>
-          <button>Get Started!</button>
+          <button className="btn">Get Started!</button>
         </div>
         <div class='img background-img'></div>
       </div>

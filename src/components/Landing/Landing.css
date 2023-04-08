@@ -32,9 +32,11 @@
 }
 .container .info h1 {
   font-size: 4rem;
+  color: #c95858;
 }
 .container .info p {
   font-size: 2rem;
+  color: #974b4b;
 }
 .container .info button {
   padding: 15px;
