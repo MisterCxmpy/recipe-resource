@@ -5,6 +5,7 @@
   flex-direction: column;
 }
 .section > h1 {
+  margin: 20px 0;
   color: #c95858;
 }
 
@@ -17,4 +18,5 @@
   height: -moz-max-content;
   height: max-content;
   flex-direction: row;
+  margin: 20px 0;
 }/*# sourceMappingURL=Section.css.map */

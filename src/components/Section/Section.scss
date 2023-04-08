@@ -9,6 +9,7 @@
   flex-direction: column;
 
   & > h1 {
+    margin: 20px 0;
     color: #c95858;
   }
 }
@@ -21,4 +22,5 @@
   width: 1600px;
   height: max-content;
   flex-direction: row;
+  margin: 20px 0;
 }
