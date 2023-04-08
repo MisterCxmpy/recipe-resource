@@ -3,6 +3,11 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import "./Nav.css"
 
 export default function Nav() {
+
+  let activeStyle = {
+    color: "white"
+  }
+
   return (
     <>
       <nav>
@@ -14,7 +19,7 @@ export default function Nav() {
             <button className='option btn'>Option 3</button>
           </div>
         </div>
-        <button className='login btn'>Login</button>
+        <NavLink className="login btn" to="/login">Login</NavLink>
       </nav>
       <Outlet />
     </>

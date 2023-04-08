@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../Section/Section";
+import { NavLink } from "react-router-dom";
 import "./Landing.css";
 
 export default function Landing() {
@@ -12,7 +13,7 @@ export default function Landing() {
             the world and unleash your inner chef.
           </h1>
           <p>Join us in the kitchen. Let's cook up something amazing!</p>
-          <button className="btn">Get Started!</button>
+          <NavLink className="btn" to="/signup">Get Started!</NavLink>
         </div>
         <div class="img background-img"></div>
       </div>

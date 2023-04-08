@@ -24,4 +24,6 @@ nav > div, nav .options {
   color: white;
   font-size: 16px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }/*# sourceMappingURL=Nav.css.map */
