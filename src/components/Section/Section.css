@@ -1,0 +1,17 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
+  width: 1600px;
+  height: -moz-max-content;
+  height: max-content;
+  flex-direction: row;
+}/*# sourceMappingURL=Section.css.map */
