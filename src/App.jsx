@@ -1,13 +1,17 @@
 import React from 'react'
 import Nav from './layout/Nav/Nav'
-import Landing from './components/Landing/Landing'
 import Footer from './layout/Footer/Footer'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Root from './pages/Root/Root'
 
 export default function App() {
   return (
     <>
-      <Nav />
-      <Landing />
+      <Routes>
+        <Route path='/' element={<Nav />}>
+          <Route index element={<Root />}/>
+        </Route>
+      </Routes>
       <Footer />
     </>
   )
