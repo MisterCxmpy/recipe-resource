@@ -1,0 +1,17 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  @include center();
+  margin: 50px 0;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  border: 2px solid rgb(0, 0, 0);
+}

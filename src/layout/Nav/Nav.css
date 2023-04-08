@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: space-between;
+}
+nav > div, nav .options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}/*# sourceMappingURL=Nav.css.map */

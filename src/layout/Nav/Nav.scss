@@ -1,0 +1,23 @@
+$gap: 20px;
+
+@mixin flex-container {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: $gap;
+
+  & > div, & .options {
+    @include flex-container();
+    gap: $gap;
+  }
+
+  & .options {
+    
+  }
+
+  justify-content: space-between;
+}
