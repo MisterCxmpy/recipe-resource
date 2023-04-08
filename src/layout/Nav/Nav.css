@@ -8,4 +8,13 @@ nav > div, nav .options {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 5px;
+  min-width: 80px;
 }/*# sourceMappingURL=Nav.css.map */

@@ -7,11 +7,40 @@
 .landing {
   @include center();
   margin: 50px 0;
+  flex-direction: column;
 }
 
 .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
   position: relative;
-  width: 1200px;
-  height: 700px;
-  border: 2px solid rgb(0, 0, 0);
+  width: 1600px;
+  height: 800px;
+  .img {
+    min-width: 700px;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+  }
+  .background-img {
+    background-image: url("https://www.ambitiouskitchen.com/wp-content/uploads/2019/04/bananaoatmealpancakes-6-594x594.jpg");
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+    button {
+      padding: 15px;
+    }
+  }
 }

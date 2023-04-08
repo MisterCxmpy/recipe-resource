@@ -15,9 +15,14 @@ nav {
     gap: $gap;
   }
 
-  & .options {
-    
-  }
-
   justify-content: space-between;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 5px;
+  min-width: 80px;
 }
