@@ -17,6 +17,7 @@
   text-shadow: 0px 1px 10px black;
   font-size: 3rem;
   transition: 0.4s;
+  padding: 0 20px;
 }
 
 .info-card img {

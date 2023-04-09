@@ -28,4 +28,8 @@ nav > div, nav .options {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+}
+.btn-x {
+  padding: 18px;
+  font-size: 20px;
 }/*# sourceMappingURL=Nav.css.map */

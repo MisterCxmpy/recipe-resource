@@ -13,7 +13,7 @@ export default function Landing() {
             the world and unleash your inner chef.
           </h1>
           <p>Join us in the kitchen. Let's cook up something amazing!</p>
-          <NavLink className="btn" to="/signup">Get Started!</NavLink>
+          <NavLink className="btn btn-x" to="/signup">Get Started!</NavLink>
         </div>
         <div class="img background-img"></div>
       </div>

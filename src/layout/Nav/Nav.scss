@@ -36,4 +36,9 @@ nav {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+
+  &-x {
+    padding: 18px;
+    font-size: 20px;
+  }
 }
