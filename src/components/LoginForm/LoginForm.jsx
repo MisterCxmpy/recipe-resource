@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import "./LoginForm.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from '../../context/AuthContext';
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { setUser } = useAuth();
+  const navigate = useNavigate();
 
   const Login = async (e) => {
     e.preventDefault();
@@ -25,6 +26,7 @@ export default function LoginForm() {
     if (res.ok) {
       console.log(`Successfully logged in: ${user.username}`);
       setUser(user.username);
+      navigate("/home")
     } else {
       console.log("Something failed, very sad! :(");
     }
