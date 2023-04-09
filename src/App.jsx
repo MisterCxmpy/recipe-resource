@@ -5,10 +5,11 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Root from './pages/Root/Root'
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+import { AuthProvider } from './context/AuthContext';
 
 export default function App() {
   return (
-    <>
+    <AuthProvider>
       <Routes>
         <Route path='/' element={<Nav />}>
           <Route index element={<Root />}/>
@@ -17,6 +18,6 @@ export default function App() {
         </Route>
       </Routes>
       <Footer />
-    </>
+    </AuthProvider>
   )
 }
