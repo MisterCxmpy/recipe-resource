@@ -1,13 +1,18 @@
-import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext';
+import { useLocation, Outlet, Navigate } from 'react-router-dom';
 
-export default function ProtectedRoute({ logged, children }) {
-  const { user } = useAuth();
+export default function ProtectedRoute() {
+    const { user, setUser } = useAuth();
+    const [ loading, setLoading ] = useState(true)
+    const location = useLocation()
 
-  if (user) {
-    return children
-  } else {
-    return <Navigate to="/" replace />
-  }
+    useEffect(() => {
+      setUser("admin")
+      setLoading(false)
+    }, [])
+
+    if (!loading) {
+      return user ? <Outlet />  : <Navigate to={'/login'} state={{from: location}} replace />
+    }
 }

@@ -25,7 +25,8 @@ export default function LoginForm() {
   
     if (res.ok) {
       console.log(`Successfully logged in: ${user.username}`);
-      setUser(user.username);
+      localStorage.setItem("user", user.username)
+      setUser(user);
       navigate("/home")
     } else {
       console.log("Something failed, very sad! :(");
