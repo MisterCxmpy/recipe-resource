@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.form h1 {
+  padding: 30px 0;
+  text-align: center;
+  background: #c95858;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+}
+.form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+.form form .input {
+  width: 80%;
+  position: relative;
+}
+.form form .input input:focus ~ span {
+  top: -50px;
+  font-size: 20px;
+}
+.form form .input input:valid ~ span {
+  top: -50px;
+  font-size: 20px;
+}
+.form form input {
+  padding: 20px;
+  width: 100%;
+  font-size: 18px;
+}
+.form form span {
+  position: absolute;
+  padding: 20px;
+  font-size: 20px;
+  color: rgba(32, 32, 32, 0.4745098039);
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.form form button {
+  width: 100%;
+}
+.form form .redirect-signup {
+  text-decoration: none;
+  color: #202020;
+}/*# sourceMappingURL=LoginForm.css.map */
