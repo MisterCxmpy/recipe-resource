@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import "./Nav.css"
 
 export default function Nav() {
@@ -8,18 +8,21 @@ export default function Nav() {
     color: "white"
   }
 
+  let location = useLocation();
+
   return (
     <>
       <nav>
         <div>  
-          <h1 className='title'>Recipe Resource</h1>
+        <NavLink className="title" to="/">Recipe Resource</NavLink>
           <div className='options'>
             <button className='option btn'>Option 1</button>
             <button className='option btn'>Option 2</button>
             <button className='option btn'>Option 3</button>
           </div>
         </div>
-        <NavLink className="login btn" to="/login">Login</NavLink>
+        
+        {location.pathname === "/login" ? <NavLink className="signup btn" to="/signup">Sign up</NavLink> : <NavLink className="login btn" to="/login">Login</NavLink>}
       </nav>
       <Outlet />
     </>

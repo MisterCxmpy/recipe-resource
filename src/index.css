@@ -13,3 +13,8 @@ html, body, * {
 body {
   background: #fafafa;
 }
+
+html {
+  height: max-content;
+  position: relative;
+}

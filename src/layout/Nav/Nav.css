@@ -13,6 +13,8 @@ nav > div, nav .options {
 .title {
   font-size: 2rem;
   color: #974b4b;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn {
