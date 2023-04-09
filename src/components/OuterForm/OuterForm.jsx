@@ -3,7 +3,7 @@ import "./OuterForm.css"
 
 export default function OuterForm({ form: FormComponent}) {
   return (
-    <div className='login-form-outer'>
+    <div>
       <FormComponent />
     </div>
   )

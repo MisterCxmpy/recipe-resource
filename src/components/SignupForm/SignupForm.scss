@@ -1,0 +1,68 @@
+$gap: 40px;
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  @include center();
+  gap: $gap;
+
+  h1 {
+    padding: 30px 0;
+    text-align: center;
+    background: #c95858;
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+  }
+
+  form {
+    @include center();
+    gap: $gap;
+    width: 100%;
+
+    .input {
+      width: 80%;
+      position: relative;
+
+      input:focus ~ span {
+        top: -50px;
+        font-size: 20px;
+      }
+
+      input:valid ~ span {
+        top: -50px;
+        font-size: 20px;
+      }
+    }
+
+    input {
+      padding: 20px;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    span {
+      position: absolute;
+      padding: 20px;
+      font-size: 20px;
+      color: #20202079;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .redirect-login {
+      text-decoration: none;
+      color: #202020;
+    }
+  }
+}

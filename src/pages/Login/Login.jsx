@@ -6,7 +6,9 @@ import LoginForm from '../../components/LoginForm/LoginForm'
 export default function Login() {
   return (
     <div className='login-container'>
-      <OuterForm form={LoginForm}/>
+      <div className="login-form-outer">
+        <OuterForm form={LoginForm}/>
+      </div>
     </div>
   )
 }
