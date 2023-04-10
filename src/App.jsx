@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import Nav from "./layout/Nav/Nav";
 import Footer from "./layout/Footer/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Root from "./pages/Root/Root";
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
-import Home from "./pages/Home/Home";
-import Logout from "./pages/Logout/Logout";
+import { Home, Login, Logout, Root, Signup } from "./pages/"
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 export default function App() {
