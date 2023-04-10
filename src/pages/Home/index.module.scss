@@ -16,7 +16,7 @@
   margin-bottom: 50px;
 }
 
-.showcase {
+.showcase, .categories {
   display: flex;
   justify-content: space-between;
   padding: 50px;
@@ -47,7 +47,7 @@
   @include flex-row();
 
   & > img {
-    width: 40%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
@@ -111,7 +111,7 @@
       padding: 10px;
       background: #c95858;
       color: white;
-      border: #974b4b 1.5px solid;
+      border: #974b4b 2.5px solid;
       border-radius: 15px;
       font-size: 1.5rem;
       cursor: pointer;

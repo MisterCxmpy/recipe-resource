@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import "./Nav.css";
 import { useAuth } from "../../context/AuthContext";
 
 export default function Nav() {
   const { user } = useAuth();
+  const [visible, setVisible] = useState(false)
 
   let location = useLocation();
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true)
+    } 
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
+  
+  window.addEventListener('scroll', toggleVisible);
 
   return (
     <>
@@ -43,6 +63,9 @@ export default function Nav() {
           </NavLink>
         )}
       </nav>
+      <button className="return-to-top" onClick={scrollToTop} style={{opacity: visible ? 1 : 0}}>
+        &#10095;
+      </button>
       <Outlet />
     </>
   );

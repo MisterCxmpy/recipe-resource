@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useAuth } from "../../context/AuthContext";
 import styles from "./index.module.css";
 import Section from "../../components/Section/Section";
 import RecipeTags from "../../components/RecipeTags/RecipeTags";
@@ -43,7 +42,6 @@ export default function Home() {
             <div className={styles["showcase-image"]}>
               <img
                 src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                alt="Slide 1"
               ></img>
               <div className={styles["recipe-info"]}>
                 <RecipeTags tags={["Tag 1", "Tag 2", "Tag 3"]} />
@@ -66,6 +64,10 @@ export default function Home() {
         <a className={styles.next} onClick={nextSlide}>
           &#10095;
         </a>
+      </div>
+      <Section heading="Categories" />
+      <div className={styles.categories}>
+
       </div>
     </div>
   );

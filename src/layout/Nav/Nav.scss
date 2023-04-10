@@ -42,3 +42,20 @@ nav {
     font-size: 20px;
   }
 }
+
+.return-to-top {
+  position: fixed;
+  rotate: -90deg;
+  height: 75px;
+  width: 75px;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  transition: 0.25s;
+  border-radius: 15px;
+  border: #974b4b solid 2.5px;
+  color: white;
+  background: #c95858;
+  font-size: 2rem;
+  cursor: pointer;
+}
