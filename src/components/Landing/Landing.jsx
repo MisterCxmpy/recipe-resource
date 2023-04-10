@@ -18,7 +18,7 @@ export default function Landing() {
           <p>Join us in the kitchen. Let's cook up something amazing!</p>
           {!user ? <NavLink className="btn btn-x" to="/signup">Get Started!</NavLink> : <NavLink className="btn btn-x" to="/home">Find Recipes!</NavLink>}
         </div>
-        <div class="img background-img"></div>
+        <div className="img background-img"></div>
       </div>
       <div className="sections">
         <Section

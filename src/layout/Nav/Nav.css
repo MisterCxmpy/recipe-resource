@@ -49,4 +49,26 @@ nav > div, nav .options {
   background: #c95858;
   font-size: 2rem;
   cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  background: #974b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 18px;
+}
+
+.body {
+  min-height: 100vh;
 }/*# sourceMappingURL=Nav.css.map */

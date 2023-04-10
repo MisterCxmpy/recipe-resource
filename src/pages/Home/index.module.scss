@@ -10,6 +10,7 @@
 }
 
 .home {
+  min-height: calc(100vh - 130px);
   @include center;
   flex-direction: column;
   margin-top: 0;

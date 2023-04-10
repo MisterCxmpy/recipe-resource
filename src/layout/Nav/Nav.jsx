@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import "./Nav.css";
 import { useAuth } from "../../context/AuthContext";
+import Footer from "../Footer/Footer";
+
 
 export default function Nav() {
   const { user } = useAuth();
@@ -21,8 +23,7 @@ export default function Nav() {
   
   const scrollToTop = () =>{
     window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
+      top: 0
     });
   };
   
@@ -66,7 +67,10 @@ export default function Nav() {
       <button className="return-to-top" onClick={scrollToTop} style={{opacity: visible ? 1 : 0}}>
         &#10095;
       </button>
-      <Outlet />
+      <div className="body">
+        <Outlet />
+      </div>
+      <Footer />
     </>
   );
 }
