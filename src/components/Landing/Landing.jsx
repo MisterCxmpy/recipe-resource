@@ -2,8 +2,11 @@ import React from "react";
 import Section from "../Section/Section";
 import { NavLink } from "react-router-dom";
 import "./Landing.css";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Landing() {
+  const { user } = useAuth();
+
   return (
     <div className="landing">
       <div className="container">
@@ -13,7 +16,7 @@ export default function Landing() {
             the world and unleash your inner chef.
           </h1>
           <p>Join us in the kitchen. Let's cook up something amazing!</p>
-          <NavLink className="btn btn-x" to="/signup">Get Started!</NavLink>
+          {!user ? <NavLink className="btn btn-x" to="/signup">Get Started!</NavLink> : <NavLink className="btn btn-x" to="/home">Find Recipes!</NavLink>}
         </div>
         <div class="img background-img"></div>
       </div>

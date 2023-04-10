@@ -6,6 +6,7 @@ import Root from "./pages/Root/Root";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Home/Home";
+import Logout from "./pages/Logout/Logout";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="signup" element={<Signup />} />
           <Route element={<ProtectedRoute />}>
             <Route path="home" element={<Home />}/>
+            <Route path="logout" element={<Logout />}/>
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
