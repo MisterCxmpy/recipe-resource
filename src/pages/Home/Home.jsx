@@ -5,6 +5,7 @@ import ShowcaseImage from "../../components/ShowcaseImage/ShowcaseImage";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [recipes, setRecipes] = useState([]);
 
   const carouselRef = useRef();
 
@@ -31,24 +32,38 @@ export default function Home() {
     }
   }
 
+  async function getData() {
+    const response = await fetch("https://localhost:8080/recipe/popular");
+
+    const data = await response.json();
+
+    setRecipes(data);
+  }
+
+  useEffect(() => {
+    getData();
+  });
+
   return (
     <div className={styles.home}>
       <Section heading="Popular Recipes" />
       <div className={styles.showcase}>
         <div className={styles["carousel-container"]}>
           <div className={styles["carousel-slide"]} ref={carouselRef}>
-            <ShowcaseImage
-              image={
-                "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              }
-              tags={["Tag 1", "Tag 2", "Tag 3"]}
-              title="This is the title"
-              date="Date created"
-              comments="Comments"
-              likes="5"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt velit voluptate illum vel corporis blanditiis excepturi, mollitia dolor enim amet impedit unde, nam repudiandae aliquam eveniet natus asperiores! Ut, ratione!"
-              publisher="admin"
-            />
+            {recipes.map((recipe) => {
+              return (
+                <ShowcaseImage
+                  image={recipe.recipe_image}
+                  tags={[...recipe.tags]}
+                  title={recipe.recipe_name}
+                  date={recipe.date}
+                  comments={`Comments: ${recipe.comments}`}
+                  likes={`Likes: ${recipe.likes}`}
+                  desc={recipe.description}
+                  publisher={recipe.author}
+                />
+              );
+            })}
           </div>
         </div>
         <a className={styles.prev} onClick={prevSlide}>
